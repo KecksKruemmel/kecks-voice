@@ -1,0 +1,26 @@
+# Geheimnisse
+.env
+*.key
+credentials*
+
+# Persönliche Einstellungen (werden beim ersten Start angelegt)
+kecksvoice.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build
+build/
+dist/
+*.spec
+*.exe
+
+# Sonstiges
+node_modules/
+.claude/
+.vscode/
+.idea/
+Thumbs.db

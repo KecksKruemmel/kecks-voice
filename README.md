@@ -28,7 +28,7 @@ und der Text landet im aktiven Fenster. Ohne Cloud, ohne Konto, ohne API-Key.
 Voraussetzungen: Windows 10/11, Python 3.10+ und ein Mikrofon.
 
 ```bat
-git clone https://github.com/<dein-name>/kecks-voice.git
+git clone https://github.com/KecksKruemmel/kecks-voice.git
 cd kecks-voice
 python -m pip install -r requirements.txt
 python kecksvoice.py

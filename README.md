@@ -1,8 +1,6 @@
 <div align="center">
 
-# 🍪 KecksVoice
-
-**Sprich. Es tippt.**
+# KecksVoice
 
 Lokales Push-to-Talk-Diktieren für Windows. Taste halten, sprechen, loslassen,
 und der Text landet im aktiven Fenster. Ohne Cloud, ohne Konto, ohne API-Key.
@@ -14,13 +12,15 @@ und der Text landet im aktiven Fenster. Ohne Cloud, ohne Konto, ohne API-Key.
 ## Funktionen
 
 - **Push-to-Talk:** frei wählbare Taste, zum Beispiel die rechte Shift-Taste.
-- **100 % lokale Spracherkennung** mit [faster-whisper](https://github.com/SYSTRAN/faster-whisper) auf der CPU.
+- **Lokale Spracherkennung** mit [faster-whisper](https://github.com/SYSTRAN/faster-whisper) auf der CPU.
 - **Fügt direkt ein:** in jedes Programm, die Zwischenablage bleibt erhalten.
-- **Räumt auf:** Füllwörter wie „äh“ und „ähm“ fliegen raus.
-- **Optionaler KI-Feinschliff:** Ein lokales [Ollama](https://ollama.com)-Modell glättet Selbstkorrekturen.
-- **Schwebendes Overlay** mit Live-Wellenform während der Aufnahme.
+- **Räumt auf:** Füllwörter wie „äh“ und „ähm“ werden entfernt.
+- **Optionale Nachbearbeitung:** Ein lokales [Ollama](https://ollama.com)-Modell glättet Selbstkorrekturen.
+- **Kleine Statusanzeige** am unteren Bildschirmrand mit Pegel während der Aufnahme.
 - **Verlauf:** Ein Klick kopiert einen früheren Text erneut.
-- **Tray-Icon und Autostart:** läuft unauffällig im Hintergrund.
+- **Infobereich und Autostart:** läuft im Hintergrund.
+- **Darstellung:** Dunkel oder Glas (Acrylic-Effekt unter Windows 11).
+- **Pegelanzeige:** zeigt live, ob das Mikrofon etwas hört.
 - Deutsch, Englisch oder automatische Spracherkennung.
 
 ## Schnellstart
@@ -50,9 +50,9 @@ Danach liegt `dist\KecksVoice.exe` bereit. Die Datei braucht kein installiertes 
 | Aktion | So geht's |
 |---|---|
 | Diktieren | Aufnahme-Taste **halten**, sprechen, **loslassen** |
-| Taste ändern | *Einstellungen → Aufnahme-Taste* anklicken, neue Taste drücken (Esc bricht ab) |
+| Taste ändern | Auf die Tastenkappe klicken, neue Taste drücken (Esc bricht ab) |
 | Text erneut kopieren | Im *Verlauf* auf einen Eintrag klicken |
-| Fenster schließen | Die App läuft im Tray weiter; *Beenden* schließt sie ganz |
+| Fenster schließen | Die App läuft im Infobereich weiter, *Beenden* schließt sie ganz |
 
 ### Modelle
 
@@ -63,11 +63,11 @@ Danach liegt `dist\KecksVoice.exe` bereit. Die Datei braucht kein installiertes 
 | Medium | langsamer | sehr gut |
 | Large | langsam | am besten |
 
-### KI-Feinschliff (optional)
+### Nachbearbeitung mit Ollama (optional)
 
 1. [Ollama](https://ollama.com) installieren.
 2. Das Modell holen: `ollama pull llama3.2`.
-3. In KecksVoice *KI-Feinschliff* einschalten.
+3. In KecksVoice *Nachbearbeitung mit Ollama* einschalten.
 
 Aus „Wir treffen uns um drei, nein, um vier“ wird dann „Wir treffen uns um vier.“
 
@@ -82,7 +82,8 @@ Die Einstellungen liegen in `kecksvoice.json` neben der App und werden automatis
   "language": "auto",
   "ollama": false,
   "ollama_model": "llama3.2",
-  "autostart": false
+  "autostart": false,
+  "theme": "dark"
 }
 ```
 
@@ -94,4 +95,4 @@ Die Einstellungen liegen in `kecksvoice.json` neben der App und werden automatis
 
 ## Lizenz
 
-[MIT](LICENSE). Frisch gebacken von Kecks.
+[MIT](LICENSE)

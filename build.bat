@@ -1,5 +1,4 @@
 @echo off
-REM Baut dist\KecksVoice.exe (eine einzelne Datei, kein Python nötig).
 cd /d "%~dp0"
 python -m pip install -r requirements.txt pyinstaller || goto :fail
 python make_icon.py || goto :fail

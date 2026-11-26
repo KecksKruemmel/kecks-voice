@@ -11,6 +11,7 @@
   <img alt="Python 3.10 und neuer" src="https://img.shields.io/badge/Python-3.10%2B-d39256?style=flat&labelColor=171310">
   <img alt="Läuft offline" src="https://img.shields.io/badge/L%C3%A4uft-offline-6fbf8a?style=flat&labelColor=171310">
   <img alt="Lizenz MIT" src="https://img.shields.io/badge/Lizenz-MIT-9a8b7e?style=flat&labelColor=171310">
+  <a href="https://github.com/KecksKruemmel/kecks-voice/releases/latest"><img alt="Neueste Version" src="https://img.shields.io/github/v/release/KecksKruemmel/kecks-voice?style=flat&labelColor=171310&color=d39256&label=Version"></a>
   <a href="https://discord.gg/bPB3p9ranD"><img alt="Discord" src="https://img.shields.io/badge/Discord-Support-d39256?style=flat&labelColor=171310&logo=discord&logoColor=white"></a>
 </p>
 
@@ -66,6 +67,10 @@
 
 ## Schnellstart
 
+**Am einfachsten:** [KecksVoice.exe herunterladen](https://github.com/KecksKruemmel/kecks-voice/releases/latest/download/KecksVoice.exe) und starten. Kein Python nötig, nur Windows 10 oder 11 und ein Mikrofon. Alle Versionen stehen unter [Releases](https://github.com/KecksKruemmel/kecks-voice/releases).
+
+### Aus dem Quellcode
+
 Du brauchst Windows 10 oder 11, Python 3.10 oder neuer und ein Mikrofon.
 
 ```bat
@@ -77,7 +82,7 @@ python kecksvoice.py
 
 Beim ersten Start lädt die App das Sprachmodell einmalig herunter. Danach funktioniert alles offline.
 
-### Als EXE
+### EXE selbst bauen
 
 ```bat
 build.bat

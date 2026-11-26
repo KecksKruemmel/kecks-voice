@@ -11,6 +11,7 @@
   <img alt="Python 3.10 und neuer" src="https://img.shields.io/badge/Python-3.10%2B-d39256?style=flat&labelColor=171310">
   <img alt="Läuft offline" src="https://img.shields.io/badge/L%C3%A4uft-offline-6fbf8a?style=flat&labelColor=171310">
   <img alt="Lizenz MIT" src="https://img.shields.io/badge/Lizenz-MIT-9a8b7e?style=flat&labelColor=171310">
+  <a href="https://discord.gg/bPB3p9ranD"><img alt="Discord" src="https://img.shields.io/badge/Discord-Support-d39256?style=flat&labelColor=171310&logo=discord&logoColor=white"></a>
 </p>
 
 <br>
@@ -134,6 +135,10 @@ Alles wird automatisch in `kecksvoice.json` neben der App gespeichert:
   <tr><td>Verlauf</td><td>existiert nur im Arbeitsspeicher und ist nach dem Beenden weg</td></tr>
   <tr><td>Internet</td><td>nur für den einmaligen Modell Download und, falls aktiviert, Ollama auf <code>localhost</code></td></tr>
 </table>
+
+## Hilfe und Community
+
+Fragen, Fehler oder Ideen? Auf dem [Kecks Support-Discord](https://discord.gg/bPB3p9ranD) hat KecksVoice ein eigenes Forum. Dort gibt es auch Update-Benachrichtigungen zu neuen Versionen und private Tickets.
 
 ## Lizenz
 

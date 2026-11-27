@@ -71,7 +71,20 @@
 
 ## Schnellstart
 
-**Am einfachsten:** [KecksVoice.exe herunterladen](https://github.com/KecksKruemmel/kecks-voice/releases/latest/download/KecksVoice.exe) und starten. Kein Python nötig, nur Windows 10 oder 11 und ein Mikrofon. Alle Versionen stehen unter [Releases](https://github.com/KecksKruemmel/kecks-voice/releases).
+<p align="center">
+  <a href="https://github.com/KecksKruemmel/kecks-voice/releases/latest/download/KecksVoice-Setup-2.0.exe"><img alt="KecksVoice herunterladen" src="https://img.shields.io/badge/Download-KecksVoice%20Setup-d39256?style=for-the-badge&labelColor=171310&logo=windows&logoColor=white"></a>
+</p>
+
+**So installierst du es:**
+1. [KecksVoice-Setup-2.0.exe](https://github.com/KecksKruemmel/kecks-voice/releases/latest/download/KecksVoice-Setup-2.0.exe) herunterladen und doppelklicken.
+2. Die Installation läuft ohne Administrator-Rechte. Sprache wählen, Weiter, Installieren.
+3. Fertig. KecksVoice startet am Ende automatisch.
+
+Kein Python nötig, nur Windows 10 oder 11 und ein Mikrofon. Beim ersten Start lädt die App das Sprachmodell einmalig herunter.
+
+> **Hinweis zur Windows-Warnung:** Windows kann beim ersten Start „Der Computer wurde durch Windows geschützt“ anzeigen. Das liegt daran, dass die App noch nicht digital signiert ist. Klick auf **Weitere Informationen** und dann auf **Trotzdem ausführen**. Den Installer kannst du dir auch im Release-Ordner ansehen, der Quellcode steht komplett offen im Repo.
+
+Ältere Versionen und die portable Variante findest du unter [Releases](https://github.com/KecksKruemmel/kecks-voice/releases).
 
 ### Aus dem Quellcode
 
@@ -91,6 +104,8 @@ Beim ersten Start lädt die App das Sprachmodell einmalig herunter. Danach funkt
 ```bat
 build.bat
 ```
+
+Den Installer baust du mit Inno Setup 7 aus `installer\KecksVoice.iss`. Ergebnis: `installer\out\KecksVoice-Setup-2.0.exe`.
 
 Danach liegt `dist\KecksVoice.exe` bereit. Auf dem Zielrechner wird kein Python gebraucht.
 

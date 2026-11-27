@@ -15,6 +15,10 @@
   <a href="https://discord.gg/bPB3p9ranD"><img alt="Discord" src="https://img.shields.io/badge/Discord-Support-d39256?style=flat&labelColor=171310&logo=discord&logoColor=white"></a>
 </p>
 
+<p align="center">
+  <img src="docs/demo.gif" alt="KecksVoice in Aktion: Taste halten, sprechen, Text wird eingefügt" width="420">
+</p>
+
 <br>
 
 ## So funktioniert es

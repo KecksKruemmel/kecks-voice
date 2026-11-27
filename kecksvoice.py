@@ -49,7 +49,8 @@ DEFAULTS = {
     "theme": "dark",
 }
 MODELS = [("tiny", "Tiny"), ("base", "Base"), ("small", "Small"), ("medium", "Medium"), ("large-v3", "Large")]
-THEMES = [("dark", "Dunkel"), ("glass", "Glas")]
+THEMES = [("dark", "Dunkel"), ("glass", "Glas"), ("amethyst", "Amethyst")]
+GLASS_THEMES = {"glass", "amethyst"}
 LANGS = [("auto", "Auto"), ("de", "Deutsch"), ("en", "Englisch")]
 KEY_NAMES = {
     "right shift": "Shift rechts",
@@ -85,6 +86,16 @@ OV_MUTED = MUTED
 OV_ACCENT = ACCENT
 OV_GOOD = GOOD
 KEY = "#010101"
+
+PALETTE_NAMES = ("SURFACE", "RAISED", "HOVER", "LINE", "EDGE", "LIP", "TEXT", "MUTED",
+                 "ACCENT", "ON_ACCENT", "GOOD", "BAD", "OV_BG", "OV_LINE")
+KEKS_PALETTE = {name: globals()[name] for name in PALETTE_NAMES}
+AMETHYST_PALETTE = {
+    "SURFACE": "#161a33", "RAISED": "#1f2446", "HOVER": "#282e58", "LINE": "#1e2342",
+    "EDGE": "#363c6e", "LIP": "#0a0c1a", "TEXT": "#e4d8ff", "MUTED": "#8c82b4",
+    "ACCENT": "#7f8cff", "ON_ACCENT": "#0b0f24", "GOOD": "#8cc8ff", "BAD": "#ff6b8b",
+    "OV_BG": "#121530", "OV_LINE": "#2e3466",
+}
 
 FONT, SEMI = "Segoe UI", "Segoe UI Semibold"
 SS = 4
@@ -213,8 +224,10 @@ def blend(a, b, p):
 
 
 def set_palette(theme):
-    global BG
-    BG = GLASS_BG if theme == "glass" else DARK_BG
+    global BG, OV_TEXT, OV_MUTED, OV_ACCENT, OV_GOOD
+    BG = GLASS_BG if theme in GLASS_THEMES else DARK_BG
+    globals().update(AMETHYST_PALETTE if theme == "amethyst" else KEKS_PALETTE)
+    OV_TEXT, OV_MUTED, OV_ACCENT, OV_GOOD = TEXT, MUTED, ACCENT, GOOD
 
 
 class MARGINS(ctypes.Structure):
@@ -610,12 +623,12 @@ class LinkButton(tk.Label):
 
 
 STATUS = {
-    "loading": (MUTED, "Modell wird geladen"),
-    "idle": (GOOD, "Bereit"),
-    "rec": (BAD, "Aufnahme"),
-    "proc": (ACCENT, "Wird verarbeitet"),
-    "done": (GOOD, "Eingefügt"),
-    "error": (BAD, "Fehler"),
+    "loading": ("MUTED", "Modell wird geladen"),
+    "idle": ("GOOD", "Bereit"),
+    "rec": ("BAD", "Aufnahme"),
+    "proc": ("ACCENT", "Wird verarbeitet"),
+    "done": ("GOOD", "Eingefügt"),
+    "error": ("BAD", "Fehler"),
 }
 
 
@@ -692,7 +705,7 @@ class App:
         self.set_state(self.state, self.state_msg)
         self.root.update_idletasks()
         self.root.geometry(f"{WIN_W}x{self.root.winfo_reqheight()}")
-        if not style_window(self.root, theme == "glass") and theme == "glass":
+        if not style_window(self.root, theme in GLASS_THEMES) and theme in GLASS_THEMES:
             self.cfg["theme"] = "dark"
             save_config(self.cfg)
             self.rebuild()
@@ -747,8 +760,8 @@ class App:
         self._rule(body, 10, 16)
 
         self._heading(body, "Einstellungen")
-        row = self._row(body, "Darstellung", "Glas braucht Windows 11.")
-        Segmented(row, THEMES, self.cfg.get("theme", "dark"), self.on_theme, 160).pack(side="right")
+        self._row(body, "Darstellung", "Glas und Amethyst brauchen Windows 11.", pady=(0, 8))
+        Segmented(body, THEMES, self.cfg.get("theme", "dark"), self.on_theme, IW).pack(pady=(0, 16))
         row = self._row(body, "Sprache")
         Segmented(row, LANGS, self.cfg["language"], self.on_lang, 252).pack(side="right")
         self._row(body, "Modell", "Größer ist genauer, aber langsamer.", pady=(0, 8))
@@ -929,7 +942,8 @@ class App:
     def set_state(self, state, msg=None):
         self.state = state
         self.state_msg = msg
-        color, title = STATUS[state]
+        name, title = STATUS[state]
+        color = globals()[name]
         if color not in self.dots:
             self.dots[color] = ImageTk.PhotoImage(dot(8, color))
         self.status_dot.configure(image=self.dots[color])

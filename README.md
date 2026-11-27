@@ -92,20 +92,62 @@ Danach liegt `dist\KecksVoice.exe` bereit. Auf dem Zielrechner wird kein Python 
 
 ## Abhängigkeiten
 
-Alle Pakete kommen beim Installieren über `requirements.txt` aus PyPI. Eine Ausnahme ist `pyperclip`, dort liegt die Lizenz bei BSD.
+<p align="center">
+  <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-d39256?style=flat&labelColor=171310">
+  <img alt="Pakete aus PyPI" src="https://img.shields.io/badge/Pakete-PyPI-d39256?style=flat&labelColor=171310">
+  <img alt="Installation per pip" src="https://img.shields.io/badge/Installation-pip-6fbf8a?style=flat&labelColor=171310">
+</p>
+
+Alle Pakete installierst du mit einem Befehl aus `requirements.txt`:
+
+```bat
+python -m pip install -r requirements.txt
+```
 
 <table>
-  <tr><th align="left">Paket</th><th align="left">Wofür</th><th align="left">Lizenz</th></tr>
-  <tr><td><a href="https://pypi.org/project/faster-whisper/">faster-whisper</a></td><td>Spracherkennung auf der CPU</td><td>MIT</td></tr>
-  <tr><td><a href="https://pypi.org/project/sounddevice/">sounddevice</a></td><td>Mikrofon-Aufnahme</td><td>siehe Projektseite</td></tr>
-  <tr><td><a href="https://pypi.org/project/numpy/">numpy</a></td><td>Pegel und Audio-Daten</td><td>siehe Projektseite</td></tr>
-  <tr><td><a href="https://pypi.org/project/keyboard/">keyboard</a></td><td>Globale Taste zum Diktieren</td><td>MIT</td></tr>
-  <tr><td><a href="https://pypi.org/project/pyperclip/">pyperclip</a></td><td>Text in die Zwischenablage</td><td>BSD</td></tr>
-  <tr><td><a href="https://pypi.org/project/pystray/">pystray</a></td><td>Symbol im Infobereich</td><td>LGPLv3</td></tr>
-  <tr><td><a href="https://pypi.org/project/pillow/">pillow</a></td><td>Bilder für Anzeige und Symbol</td><td>siehe Projektseite</td></tr>
+  <tr>
+    <th align="left">Paket</th>
+    <th align="left">Aufgabe in KecksVoice</th>
+    <th align="left">Lizenz</th>
+  </tr>
+  <tr>
+    <td><a href="https://pypi.org/project/faster-whisper/"><b>faster-whisper</b></a></td>
+    <td>Spracherkennung, läuft offline auf der CPU</td>
+    <td>MIT</td>
+  </tr>
+  <tr>
+    <td><a href="https://pypi.org/project/sounddevice/"><b>sounddevice</b></a></td>
+    <td>Mikrofon-Aufnahme</td>
+    <td><sub>siehe Projektseite</sub></td>
+  </tr>
+  <tr>
+    <td><a href="https://pypi.org/project/numpy/"><b>numpy</b></a></td>
+    <td>Pegel und Audio-Daten</td>
+    <td><sub>siehe Projektseite</sub></td>
+  </tr>
+  <tr>
+    <td><a href="https://pypi.org/project/keyboard/"><b>keyboard</b></a></td>
+    <td>Globale Taste zum Diktieren</td>
+    <td>MIT</td>
+  </tr>
+  <tr>
+    <td><a href="https://pypi.org/project/pyperclip/"><b>pyperclip</b></a></td>
+    <td>Text in die Zwischenablage</td>
+    <td>BSD</td>
+  </tr>
+  <tr>
+    <td><a href="https://pypi.org/project/pystray/"><b>pystray</b></a></td>
+    <td>Symbol im Infobereich</td>
+    <td>LGPLv3</td>
+  </tr>
+  <tr>
+    <td><a href="https://pypi.org/project/pillow/"><b>pillow</b></a></td>
+    <td>Bilder für Anzeige und Symbol</td>
+    <td><sub>siehe Projektseite</sub></td>
+  </tr>
 </table>
 
-Zum Bauen der EXE zusätzlich: `pyinstaller` (siehe `build.bat`).
+<sub>Zum Bauen der EXE brauchst du zusätzlich `pyinstaller` (siehe `build.bat`).</sub>
 
 ## Bedienung
 

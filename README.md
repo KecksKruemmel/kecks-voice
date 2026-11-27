@@ -11,6 +11,8 @@
   <img alt="Python 3.10 und neuer" src="https://img.shields.io/badge/Python-3.10%2B-d39256?style=flat&labelColor=171310">
   <img alt="Läuft offline" src="https://img.shields.io/badge/L%C3%A4uft-offline-6fbf8a?style=flat&labelColor=171310">
   <img alt="Lizenz MIT" src="https://img.shields.io/badge/Lizenz-MIT-9a8b7e?style=flat&labelColor=171310">
+  <a href="https://github.com/KecksKruemmel/kecks-voice/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/KecksKruemmel/kecks-voice?style=flat&labelColor=171310&color=d39256&logo=github&logoColor=white"></a>
+  <a href="https://github.com/KecksKruemmel/kecks-voice/releases"><img alt="Downloads gesamt" src="https://img.shields.io/github/downloads/KecksKruemmel/kecks-voice/total?style=flat&labelColor=171310&color=d39256&label=Downloads"></a>
   <a href="https://github.com/KecksKruemmel/kecks-voice/releases/latest"><img alt="Neueste Version" src="https://img.shields.io/github/v/release/KecksKruemmel/kecks-voice?style=flat&labelColor=171310&color=d39256&label=Version"></a>
   <a href="https://discord.gg/bPB3p9ranD"><img alt="Discord" src="https://img.shields.io/badge/Discord-Support-d39256?style=flat&labelColor=171310&logo=discord&logoColor=white"></a>
 </p>

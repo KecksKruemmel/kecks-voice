@@ -90,6 +90,23 @@ build.bat
 
 Danach liegt `dist\KecksVoice.exe` bereit. Auf dem Zielrechner wird kein Python gebraucht.
 
+## Abhängigkeiten
+
+Alle Pakete kommen beim Installieren über `requirements.txt` aus PyPI. Eine Ausnahme ist `pyperclip`, dort liegt die Lizenz bei BSD.
+
+<table>
+  <tr><th align="left">Paket</th><th align="left">Wofür</th><th align="left">Lizenz</th></tr>
+  <tr><td><a href="https://pypi.org/project/faster-whisper/">faster-whisper</a></td><td>Spracherkennung auf der CPU</td><td>MIT</td></tr>
+  <tr><td><a href="https://pypi.org/project/sounddevice/">sounddevice</a></td><td>Mikrofon-Aufnahme</td><td>siehe Projektseite</td></tr>
+  <tr><td><a href="https://pypi.org/project/numpy/">numpy</a></td><td>Pegel und Audio-Daten</td><td>siehe Projektseite</td></tr>
+  <tr><td><a href="https://pypi.org/project/keyboard/">keyboard</a></td><td>Globale Taste zum Diktieren</td><td>MIT</td></tr>
+  <tr><td><a href="https://pypi.org/project/pyperclip/">pyperclip</a></td><td>Text in die Zwischenablage</td><td>BSD</td></tr>
+  <tr><td><a href="https://pypi.org/project/pystray/">pystray</a></td><td>Symbol im Infobereich</td><td>LGPLv3</td></tr>
+  <tr><td><a href="https://pypi.org/project/pillow/">pillow</a></td><td>Bilder für Anzeige und Symbol</td><td>siehe Projektseite</td></tr>
+</table>
+
+Zum Bauen der EXE zusätzlich: `pyinstaller` (siehe `build.bat`).
+
 ## Bedienung
 
 <table>

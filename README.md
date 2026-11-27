@@ -84,7 +84,7 @@
 
 Kein Python nötig, nur Windows 10 oder 11 und ein Mikrofon. Beim ersten Start lädt die App das Sprachmodell einmalig herunter.
 
-> **Hinweis zur Windows-Warnung:** Windows kann beim ersten Start „Der Computer wurde durch Windows geschützt“ anzeigen. Das liegt daran, dass die App noch nicht digital signiert ist. Klick auf **Weitere Informationen** und dann auf **Trotzdem ausführen**. Den Installer kannst du dir auch im Release-Ordner ansehen, der Quellcode steht komplett offen im Repo.
+> **Windows blockiert den Installer?** Das passiert, weil die App noch nicht digital signiert ist. Bei der normalen SmartScreen-Warnung klickst du auf **Weitere Informationen** und dann auf **Trotzdem ausführen**. Wenn **Smart App Control** den Installer blockiert, gibt es diesen Knopf nicht. Dann hilft nur, Smart App Control unter *Windows-Sicherheit → App- und Browsersteuerung* auszuschalten (eine Sicherheitseinstellung, die Windows danach nur mit Neuinstallation wieder einschaltet). Alternativ kannst du den Quellcode selbst starten (siehe „Aus dem Quellcode“).
 
 Ältere Versionen und die portable Variante findest du unter [Releases](https://github.com/KecksKruemmel/kecks-voice/releases).
 
